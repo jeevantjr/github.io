@@ -36,13 +36,13 @@
 <body class="text-slate-700">
 
     <!-- Sticky Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-white shadow-lg py-4 md:py-6 backdrop-blur-md bg-opacity-80 transition-all duration-300">
-        <div class="container mx-auto px-4 flex justify-center space-x-6 md:space-x-12 font-semibold">
-            <a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">About</a>
-            <a href="#experience" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Experience</a>
-            <a href="#skills" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Skills</a>
-            <a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Projects</a>
-            <a href="#contact" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Connect</a>
+    <nav class="sticky top-0 z-50 bg-slate-900 shadow-xl py-4 md:py-5 backdrop-blur-md bg-opacity-80 transition-all duration-300">
+        <div class="container mx-auto px-4 flex justify-center space-x-4 md:space-x-8 lg:space-x-12 font-semibold">
+            <a href="#about" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">About</a>
+            <a href="#experience" class="bg-slate-700 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">Experience</a>
+            <a href="#skills" class="bg-slate-700 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">Skills</a>
+            <a href="#projects" class="bg-slate-700 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">Projects</a>
+            <a href="#contact" class="bg-slate-700 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">Connect</a>
         </div>
     </nav>
 
@@ -50,11 +50,11 @@
     <div class="container mx-auto p-4 md:p-8 lg:p-12 mt-6">
 
         <!-- Header Section -->
-        <header class="bg-indigo-700 text-white p-8 md:p-12 lg:p-16 rounded-2xl shadow-2xl flex flex-col items-center text-center">
+        <header class="bg-indigo-700 text-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl flex flex-col items-center text-center">
             <!-- Profile Photo & Name -->
             <img src="https://placehold.co/150x150/ffffff/4f46e5?text=TJ"
-                 alt="Dr. T. Jeevaraaj"
-                 class="w-36 h-36 rounded-full border-4 border-white shadow-xl mb-6 transform -translate-y-2 hover:scale-105 transition-transform duration-300">
+                alt="Dr. T. Jeevaraaj"
+                class="w-36 h-36 rounded-full border-4 border-white shadow-xl mb-6 transform -translate-y-2 hover:scale-105 transition-transform duration-300">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mt-4">Dr. T. Jeevaraaj</h1>
             <h2 class="text-xl md:text-2xl font-light mt-2 text-indigo-200">MBBS | MCGP | MSc Biomedical Informatics</h2>
             <p class="text-lg font-light italic mt-4 max-w-2xl">"Transforming Public Health through Digital Innovation"</p>
@@ -81,14 +81,22 @@
             <!-- Left Column: Profile, Skills, etc. -->
             <div class="md:col-span-1 space-y-8">
                 <!-- About Section -->
-                <section id="about" class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">About</h3>
+                <section id="about" class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for About -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        About
+                    </h3>
                     <p class="text-base text-slate-700 leading-relaxed">A dedicated medical professional and informatics specialist with a strong interest in bridging healthcare and technology. I develop digital tools that simplify health data management, public health surveillance, and institutional inventory. With hands-on experience in building open-source applications using web technologies and government health datasets, I focus on scalable solutions for LMICs and community-based health systems.</p>
                 </section>
 
                 <!-- Technical Skills Section -->
-                <section id="skills" class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Technical Skills</h3>
+                <section id="skills" class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for Skills -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        Technical Skills
+                    </h3>
                     <div class="space-y-6">
                         <div>
                             <h4 class="font-bold text-lg text-slate-900 mb-2">Languages & Tools</h4>
@@ -124,8 +132,12 @@
                 </section>
 
                 <!-- Awards & Certifications Section -->
-                <section class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Awards & Certifications</h3>
+                <section class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for Awards -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award"><circle cx="12" cy="8" r="6"/><path d="M15.48 11a5.9 5.9 0 0 0-6.96 0"/><path d="M19 14v4l-7 4-7-4v-4"/></svg>
+                        Awards & Certifications
+                    </h3>
                     <ul class="list-disc list-inside text-slate-700 space-y-2">
                         <li>1st Place, Digital Health Hackathon – University of Colombo (2024)</li>
                         <li>Google Mobile Web Specialist – Certified (2023)</li>
@@ -135,8 +147,12 @@
                 </section>
 
                 <!-- Interests Section -->
-                <section class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Interests</h3>
+                <section class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for Interests -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.87 0-3.53 1.03-4.5 2.5a5.5 5.5 0 0 0-5.5-2.5A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+                        Interests
+                    </h3>
                     <ul class="list-disc list-inside text-slate-700 space-y-2">
                         <li>Writing stories on healthcare inequity and systemic gaps</li>
                         <li>Exploring Web3 for community-funded health interventions</li>
@@ -149,11 +165,15 @@
             <!-- Right Column: Experience, Education, Projects -->
             <div class="md:col-span-2 space-y-8">
                 <!-- Experience Section -->
-                <section id="experience" class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Experience</h3>
+                <section id="experience" class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for Experience -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Experience
+                    </h3>
                     <div class="space-y-6">
                         <!-- Job 1 -->
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <div class="flex justify-between items-start flex-col sm:flex-row">
                                 <h4 class="text-xl font-bold text-slate-900 mb-1">Digital Health Developer</h4>
                                 <span class="text-sm font-medium text-slate-500 min-w-max">2021 – Present</span>
@@ -166,7 +186,7 @@
                             </ul>
                         </div>
                         <!-- Job 2 -->
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <div class="flex justify-between items-start flex-col sm:flex-row">
                                 <h4 class="text-xl font-bold text-slate-900 mb-1">Medical Officer – Government Health Sector</h4>
                                 <span class="text-sm font-medium text-slate-500 min-w-max">2015 – Present</span>
@@ -181,24 +201,28 @@
                 </section>
 
                 <!-- Education Section -->
-                <section class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Education</h3>
+                <section class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for Education -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.992a.5.5 0 0 0-.084-.528L12.986 4.604a1 1 0 0 0-1.972 0L2.664 10.464a.5.5 0 0 0-.084.528 2.001 2.001 0 0 0 .74 1.76l8.847 5.58a1.001 1.001 0 0 0 1.976-.002L20.68 12.752a2.001 2.001 0 0 0 .74-1.76z"/><path d="M10 12.5V17a2 2 0 0 0 4 0v-4.5"/><path d="M22 10.5V17a2 2 0 0 1-4 0v-4.5"/><path d="M16 10.5V17a2 2 0 0 1-4 0v-4.5"/></svg>
+                        Education
+                    </h3>
                     <div class="space-y-4">
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <div class="flex justify-between items-center">
                                 <h4 class="text-lg font-bold text-slate-900">MSc in Biomedical Informatics</h4>
                                 <span class="text-sm font-medium text-slate-500">2023</span>
                             </div>
                             <p class="font-medium text-slate-700">Postgraduate Institute of Medicine, University of Colombo</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <div class="flex justify-between items-center">
                                 <h4 class="text-lg font-bold text-slate-900">MBBS</h4>
                                 <span class="text-sm font-medium text-slate-500">Graduation Year</span>
                             </div>
                             <p class="font-medium text-slate-700">[Your Medical Faculty Name], Sri Lanka</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <div class="flex justify-between items-center">
                                 <h4 class="text-lg font-bold text-slate-900">MCGP</h4>
                                 <span class="text-sm font-medium text-slate-500">Year</span>
@@ -209,26 +233,30 @@
                 </section>
 
                 <!-- Projects Section -->
-                <section id="projects" class="bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Projects</h3>
+                <section id="projects" class="bg-white rounded-3xl shadow-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight flex items-center gap-2">
+                        <!-- Icon for Projects -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-open"><path d="M15 22H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h5.5l2 2H20a2 2 0 0 1 2 2v3.5"/><path d="M12 10v6"/><path d="M15 13h-6"/></svg>
+                        Projects
+                    </h3>
                     <div class="space-y-4">
                         <!-- Project 1 -->
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <h4 class="text-lg font-bold text-slate-900">📊 RDHS Stats Viewer</h4>
                             <p class="text-slate-700">PWA dashboard for real-time health statistics across hospitals in Trincomalee district.</p>
                         </div>
                         <!-- Project 2 -->
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <h4 class="text-lg font-bold text-slate-900">🌡️ Outbreak Watch</h4>
                             <p class="text-slate-700">Mobile-friendly tool for early outbreak detection and response reporting.</p>
                         </div>
                         <!-- Project 3 -->
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <h4 class="text-lg font-bold text-slate-900">🌊 Flood Tracker App</h4>
                             <p class="text-slate-700">App to capture flood impact data in government hospitals during seasonal emergencies.</p>
                         </div>
                         <!-- Project 4 -->
-                        <div class="p-4 bg-slate-50 rounded-xl">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <h4 class="text-lg font-bold text-slate-900">🧾 Snipe-IT Custom Dashboard</h4>
                             <p class="text-slate-700">Customized Laravel views to include institutional-level asset summaries and reports.</p>
                         </div>
@@ -238,9 +266,13 @@
         </div>
     </div>
     <!-- Contact Section at the very bottom -->
-    <footer id="contact" class="bg-slate-800 text-white py-12 mt-12 rounded-t-2xl shadow-inner text-center">
+    <footer id="contact" class="bg-slate-800 text-white py-12 mt-12 rounded-t-3xl shadow-inner text-center">
         <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold mb-4">Let’s Connect</h3>
+            <h3 class="text-2xl font-bold mb-4 flex items-center justify-center gap-2">
+                <!-- Icon for Contact -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Let’s Connect
+            </h3>
             <p class="text-slate-300 max-w-xl mx-auto mb-6">I'm always open to discussing new projects, creative ideas, or opportunities to be a part of your vision. Feel free to reach out!</p>
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="mailto:your.email@example.com" class="flex items-center space-x-2 text-indigo-300 hover:text-white transition-colors duration-200 transform hover:scale-110">
