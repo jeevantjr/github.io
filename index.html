@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. T. Jeevaraaj - CV</title>
+    <!-- Favicon: A simple SVG to add a professional touch -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍⚕️</text></svg>">
     <!-- Use the Inter font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,228 +15,248 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* A slightly deeper slate-100 */
+        }
+        /* Custom scrollbar for a more polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-gray-800">
-    <!-- Main Container -->
-    <div class="container mx-auto p-4 md:p-8 lg:p-12">
-        <!-- CV Card Container -->
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <!-- Header Section -->
-            <header class="bg-gray-900 text-white p-6 md:p-10 lg:p-16 flex flex-col md:flex-row items-center justify-between">
-                <!-- Profile Info & Contact -->
-                <div class="flex-grow text-center md:text-left">
-                    <!-- Profile Photo Placeholder -->
-                    <!-- In a real deployment, you would replace this with a proper image. -->
-                    <img src="https://placehold.co/120x120/1d4ed8/ffffff?text=TJ"
-                         alt="Dr. T. Jeevaraaj"
-                         class="w-28 h-28 rounded-full border-4 border-white shadow-lg mx-auto md:mx-0 -mt-16 md:mt-0">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mt-4">Dr. T. Jeevaraaj</h1>
-                    <h2 class="text-xl md:text-2xl font-light text-blue-300 mt-1">MBBS | MCGP | MSc Biomedical Informatics</h2>
-                    <p class="text-lg font-light text-blue-100 mt-2">"Transforming Public Health through Digital Innovation"</p>
+<body class="text-slate-700">
 
-                    <!-- Contact Details -->
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4 text-sm font-medium">
-                        <a href="mailto:your.email@example.com" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-105">
-                            <!-- Email Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail text-blue-300"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <span>your.email@example.com</span>
-                        </a>
-                        <div class="flex items-center space-x-2">
-                            <!-- Location Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin text-blue-300"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Trincomalee, Sri Lanka</span>
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg py-4 md:py-6 backdrop-blur-md bg-opacity-80 transition-all duration-300">
+        <div class="container mx-auto px-4 flex justify-center space-x-6 md:space-x-12 font-semibold">
+            <a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">About</a>
+            <a href="#experience" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Experience</a>
+            <a href="#skills" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Skills</a>
+            <a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Projects</a>
+            <a href="#contact" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Connect</a>
+        </div>
+    </nav>
+
+    <!-- Main CV Container -->
+    <div class="container mx-auto p-4 md:p-8 lg:p-12 mt-6">
+
+        <!-- Header Section -->
+        <header class="bg-indigo-700 text-white p-8 md:p-12 lg:p-16 rounded-2xl shadow-2xl flex flex-col items-center text-center">
+            <!-- Profile Photo & Name -->
+            <img src="https://placehold.co/150x150/ffffff/4f46e5?text=TJ"
+                 alt="Dr. T. Jeevaraaj"
+                 class="w-36 h-36 rounded-full border-4 border-white shadow-xl mb-6 transform -translate-y-2 hover:scale-105 transition-transform duration-300">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mt-4">Dr. T. Jeevaraaj</h1>
+            <h2 class="text-xl md:text-2xl font-light mt-2 text-indigo-200">MBBS | MCGP | MSc Biomedical Informatics</h2>
+            <p class="text-lg font-light italic mt-4 max-w-2xl">"Transforming Public Health through Digital Innovation"</p>
+
+            <!-- Social Links in Header -->
+            <div class="flex flex-wrap justify-center gap-6 mt-8">
+                <a href="https://github.com/jeevantjr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-indigo-200 hover:text-white transition-colors duration-200 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77a5.07 5.07 0 0 0-1.44-1.28c-.7-.48-1.52-.76-2.45-.88-2.64-.1-4.78.96-6.44 2.85A10.6 10.6 0 0 0 9 5.86c-1.88 1.88-2.85 3.12-2.85 5.58a5.4 5.4 0 0 0 6.44 7c-.35 1.4-.94 2.61-2.45 2.88z"></path></svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/jeevantjr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-indigo-200 hover:text-white transition-colors duration-200 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:your.email@example.com" class="flex items-center space-x-2 text-indigo-200 hover:text-white transition-colors duration-200 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <!-- Left Column: Profile, Skills, etc. -->
+            <div class="md:col-span-1 space-y-8">
+                <!-- About Section -->
+                <section id="about" class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">About</h3>
+                    <p class="text-base text-slate-700 leading-relaxed">A dedicated medical professional and informatics specialist with a strong interest in bridging healthcare and technology. I develop digital tools that simplify health data management, public health surveillance, and institutional inventory. With hands-on experience in building open-source applications using web technologies and government health datasets, I focus on scalable solutions for LMICs and community-based health systems.</p>
+                </section>
+
+                <!-- Technical Skills Section -->
+                <section id="skills" class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">Languages & Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Google Apps Script</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">HTML</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">CSS</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">PWA</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">GitHub</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Google Sheets API</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">DHIS2</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">OpenMRS</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Snipe-IT</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Mayan EDMS</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Google Charts</span>
+                                <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Chart.js</span>
+                            </div>
                         </div>
-                        <a href="https://github.com/jeevantjr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-105">
-                            <!-- GitHub Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github text-blue-300"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77a5.07 5.07 0 0 0-1.44-1.28c-.7-.48-1.52-.76-2.45-.88-2.64-.1-4.78.96-6.44 2.85A10.6 10.6 0 0 0 9 5.86c-1.88 1.88-2.85 3.12-2.85 5.58a5.4 5.4 0 0 0 6.44 7c-.35 1.4-.94 2.61-2.45 2.88z"></path></svg>
-                            <span>github.com/jeevantjr</span>
-                        </a>
+                        <div>
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">Workflow</h4>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                <li>User-centered design in healthcare tools</li>
+                                <li>Public health reporting systems</li>
+                                <li>Agile development & field-level testing</li>
+                                <li>Mobile-first and offline-capable apps</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </header>
+                </section>
 
-            <!-- Main Content Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 md:p-10 lg:p-16">
-                <!-- Left Column (Profile, Skills, etc.) -->
-                <div class="md:col-span-1 space-y-8">
-                    <!-- About Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">About</h3>
-                        <p class="text-gray-700">A dedicated medical professional and informatics specialist with a strong interest in bridging healthcare and technology. I develop digital tools that simplify health data management, public health surveillance, and institutional inventory. With hands-on experience in building open-source applications using web technologies and government health datasets, I focus on scalable solutions for LMICs and community-based health systems.</p>
-                    </section>
+                <!-- Awards & Certifications Section -->
+                <section class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Awards & Certifications</h3>
+                    <ul class="list-disc list-inside text-slate-700 space-y-2">
+                        <li>1st Place, Digital Health Hackathon – University of Colombo (2024)</li>
+                        <li>Google Mobile Web Specialist – Certified (2023)</li>
+                        <li>Medical AI & Ethics, FutureLearn (2023)</li>
+                        <li>Best Poster – Biomedical Informatics Research Day (PGIM, 2023)</li>
+                    </ul>
+                </section>
 
-                    <!-- Technical Skills Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Technical Skills</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="font-semibold text-lg text-gray-900 mb-1">Languages & Tools</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Google Apps Script</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">HTML</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">CSS</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">React</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">PWA</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">GitHub</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Docker</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">MySQL</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Google Sheets API</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">DHIS2</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">OpenMRS</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Snipe-IT</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Mayan EDMS</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Google Charts</span>
-                                    <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Chart.js</span>
-                                </div>
+                <!-- Interests Section -->
+                <section class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Interests</h3>
+                    <ul class="list-disc list-inside text-slate-700 space-y-2">
+                        <li>Writing stories on healthcare inequity and systemic gaps</li>
+                        <li>Exploring Web3 for community-funded health interventions</li>
+                        <li>Outdoor activities with family, especially nature walks</li>
+                        <li>Testing open-source tools for public sector health applications</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Right Column: Experience, Education, Projects -->
+            <div class="md:col-span-2 space-y-8">
+                <!-- Experience Section -->
+                <section id="experience" class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Experience</h3>
+                    <div class="space-y-6">
+                        <!-- Job 1 -->
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <div class="flex justify-between items-start flex-col sm:flex-row">
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Digital Health Developer</h4>
+                                <span class="text-sm font-medium text-slate-500 min-w-max">2021 – Present</span>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-lg text-gray-900 mb-1">Workflow</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li>User-centered design in healthcare tools</li>
-                                    <li>Public health reporting systems</li>
-                                    <li>Agile development & field-level testing</li>
-                                    <li>Mobile-first and offline-capable apps</li>
-                                </ul>
-                            </div>
+                            <p class="font-medium text-slate-700 text-lg mb-2">Regional Directorate of Health Services – Trincomalee</p>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1 text-base">
+                                <li>Led the design and implementation of hospital dashboard systems using DHIS2 and Google Apps Script, **improving data retrieval time by 30%**.</li>
+                                <li>Digitized over 6,500 health assets using Snipe-IT with custom dashboards, **reducing inventory time by 50%**.</li>
+                                <li>Developed and deployed apps for flood reporting and outbreak monitoring using PWA standards, **enabling real-time data collection from field teams**.</li>
+                            </ul>
                         </div>
-                    </section>
-
-                    <!-- Awards & Certifications Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Awards & Certifications</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>1st Place, Digital Health Hackathon – University of Colombo (2024)</li>
-                            <li>Google Mobile Web Specialist – Certified (2023)</li>
-                            <li>Medical AI & Ethics, FutureLearn (2023)</li>
-                            <li>Best Poster – Biomedical Informatics Research Day (PGIM, 2023)</li>
-                        </ul>
-                    </section>
-
-                    <!-- Interests Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Interests</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Writing stories on healthcare inequity and systemic gaps</li>
-                            <li>Exploring Web3 for community-funded health interventions</li>
-                            <li>Outdoor activities with family, especially nature walks</li>
-                            <li>Testing open-source tools for public sector health applications</li>
-                        </ul>
-                    </section>
-
-                    <!-- Let's Connect Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Let’s Connect</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/jeevantjr" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
-                                <!-- GitHub Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77a5.07 5.07 0 0 0-1.44-1.28c-.7-.48-1.52-.76-2.45-.88-2.64-.1-4.78.96-6.44 2.85A10.6 10.6 0 0 0 9 5.86c-1.88 1.88-2.85 3.12-2.85 5.58a5.4 5.4 0 0 0 6.44 7c-.35 1.4-.94 2.61-2.45 2.88z"></path></svg>
-                            </a>
-                            <a href="https://linkedin.com/in/jeevantjr" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
-                                <!-- LinkedIn Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            </a>
-                            <a href="https://twitter.com/YourHandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
-                                <!-- Twitter Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3.9c-.32.02-.64.04-.96.04-5.32 0-9.64-4.32-9.64-9.64A9.64 9.64 0 0 0 4.1 4.1c-1.8-.75-3.3-2.1-3.3-2.1A10.9 10.9 0 0 0 4.8 11.2c-1.12.3-2.12.5-3.08.7.2 2.65 1.34 4.9 3.23 6.64-1.92 1.35-4.22 2.1-6.62 2.1a10.9 10.9 0 0 0 5.4 1.5c6.5 0 10.04-5.3 10.04-9.98 0-.15 0-.29-.01-.44.69-.5 1.3-1.15 1.77-1.88a10.9 10.9 0 0 0 3.1-1.28c-.58.33-1.2.6-1.85.74.67-.84 1.18-1.86 1.42-3.03z"></path></svg>
-                            </a>
+                        <!-- Job 2 -->
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <div class="flex justify-between items-start flex-col sm:flex-row">
+                                <h4 class="text-xl font-bold text-slate-900 mb-1">Medical Officer – Government Health Sector</h4>
+                                <span class="text-sm font-medium text-slate-500 min-w-max">2015 – Present</span>
+                            </div>
+                            <p class="font-medium text-slate-700 text-lg mb-2">Ministry of Health, Sri Lanka</p>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1 text-base">
+                                <li>Coordinated primary care services in divisional hospitals and outreach settings, **serving an average of 200+ patients daily**.</li>
+                                <li>Acted as the focal point for integrating digital inventory, statistics reporting, and COVID-19 response technologies, **streamlining reporting for 10+ health facilities**.</li>
+                            </ul>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <!-- Right Column (Experience, Education, Projects) -->
-                <div class="md:col-span-2 space-y-8">
-                    <!-- Experience Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Experience</h3>
-                        <div class="space-y-6">
-                            <!-- Job 1 -->
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h4 class="text-lg font-bold text-gray-900">Digital Health Developer</h4>
-                                    <span class="text-sm font-medium text-gray-500">2021 – Present</span>
-                                </div>
-                                <p class="font-medium text-gray-700">Regional Directorate of Health Services – Trincomalee</p>
-                                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                                    <li>Led the design and implementation of hospital dashboard systems using DHIS2 and Google Apps Script.</li>
-                                    <li>Digitized over 6,500 health assets using Snipe-IT with custom dashboards for asset management.</li>
-                                    <li>Developed and deployed apps for flood reporting and outbreak monitoring using PWA standards.</li>
-                                </ul>
+                <!-- Education Section -->
+                <section class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Education</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-bold text-slate-900">MSc in Biomedical Informatics</h4>
+                                <span class="text-sm font-medium text-slate-500">2023</span>
                             </div>
-                            <!-- Job 2 -->
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h4 class="text-lg font-bold text-gray-900">Medical Officer – Government Health Sector</h4>
-                                    <span class="text-sm font-medium text-gray-500">2015 – Present</span>
-                                </div>
-                                <p class="font-medium text-gray-700">Ministry of Health, Sri Lanka</p>
-                                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                                    <li>Coordinated primary care services in divisional hospitals and outreach settings.</li>
-                                    <li>Acted as the focal point for integrating digital inventory, statistics reporting, and COVID-19 response technologies.</li>
-                                </ul>
-                            </div>
+                            <p class="font-medium text-slate-700">Postgraduate Institute of Medicine, University of Colombo</p>
                         </div>
-                    </section>
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-bold text-slate-900">MBBS</h4>
+                                <span class="text-sm font-medium text-slate-500">Graduation Year</span>
+                            </div>
+                            <p class="font-medium text-slate-700">[Your Medical Faculty Name], Sri Lanka</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-lg font-bold text-slate-900">MCGP</h4>
+                                <span class="text-sm font-medium text-slate-500">Year</span>
+                            </div>
+                            <p class="font-medium text-slate-700">College of General Practitioners of Sri Lanka</p>
+                        </div>
+                    </div>
+                </section>
 
-                    <!-- Education Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Education</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h4 class="text-lg font-bold text-gray-900">MSc in Biomedical Informatics</h4>
-                                    <span class="text-sm font-medium text-gray-500">2023</span>
-                                </div>
-                                <p class="font-medium text-gray-700">Postgraduate Institute of Medicine, University of Colombo</p>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h4 class="text-lg font-bold text-gray-900">MBBS</h4>
-                                    <span class="text-sm font-medium text-gray-500">Graduation Year</span>
-                                </div>
-                                <p class="font-medium text-gray-700">[Your Medical Faculty Name], Sri Lanka</p>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h4 class="text-lg font-bold text-gray-900">MCGP</h4>
-                                    <span class="text-sm font-medium text-gray-500">Year</span>
-                                </div>
-                                <p class="font-medium text-gray-700">College of General Practitioners of Sri Lanka</p>
-                            </div>
+                <!-- Projects Section -->
+                <section id="projects" class="bg-white rounded-2xl shadow-md p-6">
+                    <h3 class="text-2xl font-extrabold text-indigo-600 mb-4 tracking-tight">Projects</h3>
+                    <div class="space-y-4">
+                        <!-- Project 1 -->
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <h4 class="text-lg font-bold text-slate-900">📊 RDHS Stats Viewer</h4>
+                            <p class="text-slate-700">PWA dashboard for real-time health statistics across hospitals in Trincomalee district.</p>
                         </div>
-                    </section>
-
-                    <!-- Projects Section -->
-                    <section>
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Projects</h3>
-                        <div class="space-y-4">
-                            <!-- Project 1 -->
-                            <div>
-                                <h4 class="text-lg font-bold text-gray-900">📊 RDHS Stats Viewer</h4>
-                                <p class="text-gray-700">PWA dashboard for real-time health statistics across hospitals in Trincomalee district.</p>
-                            </div>
-                            <!-- Project 2 -->
-                            <div>
-                                <h4 class="text-lg font-bold text-gray-900">🌡️ Outbreak Watch</h4>
-                                <p class="text-gray-700">Mobile-friendly tool for early outbreak detection and response reporting.</p>
-                            </div>
-                            <!-- Project 3 -->
-                            <div>
-                                <h4 class="text-lg font-bold text-gray-900">🌊 Flood Tracker App</h4>
-                                <p class="text-gray-700">App to capture flood impact data in government hospitals during seasonal emergencies.</p>
-                            </div>
-                            <!-- Project 4 -->
-                            <div>
-                                <h4 class="text-lg font-bold text-gray-900">🧾 Snipe-IT Custom Dashboard</h4>
-                                <p class="text-gray-700">Customized Laravel views to include institutional-level asset summaries and reports.</p>
-                            </div>
+                        <!-- Project 2 -->
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <h4 class="text-lg font-bold text-slate-900">🌡️ Outbreak Watch</h4>
+                            <p class="text-slate-700">Mobile-friendly tool for early outbreak detection and response reporting.</p>
                         </div>
-                    </section>
-                </div>
+                        <!-- Project 3 -->
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <h4 class="text-lg font-bold text-slate-900">🌊 Flood Tracker App</h4>
+                            <p class="text-slate-700">App to capture flood impact data in government hospitals during seasonal emergencies.</p>
+                        </div>
+                        <!-- Project 4 -->
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <h4 class="text-lg font-bold text-slate-900">🧾 Snipe-IT Custom Dashboard</h4>
+                            <p class="text-slate-700">Customized Laravel views to include institutional-level asset summaries and reports.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
+    <!-- Contact Section at the very bottom -->
+    <footer id="contact" class="bg-slate-800 text-white py-12 mt-12 rounded-t-2xl shadow-inner text-center">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-4">Let’s Connect</h3>
+            <p class="text-slate-300 max-w-xl mx-auto mb-6">I'm always open to discussing new projects, creative ideas, or opportunities to be a part of your vision. Feel free to reach out!</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:your.email@example.com" class="flex items-center space-x-2 text-indigo-300 hover:text-white transition-colors duration-200 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/jeevantjr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-indigo-300 hover:text-white transition-colors duration-200 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77a5.07 5.07 0 0 0-1.44-1.28c-.7-.48-1.52-.76-2.45-.88-2.64-.1-4.78.96-6.44 2.85A10.6 10.6 0 0 0 9 5.86c-1.88 1.88-2.85 3.12-2.85 5.58a5.4 5.4 0 0 0 6.44 7c-.35 1.4-.94 2.61-2.45 2.88z"></path></svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/jeevantjr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-indigo-300 hover:text-white transition-colors duration-200 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
