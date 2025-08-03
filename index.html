@@ -1,108 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. T. Jeevaraaj | Digital Health CV</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dr. Jeevaraaj - CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+    .section-title {
+      border-bottom: 2px solid #0d6efd;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    .contact-info i {
+      margin-right: 8px;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-800">Dr. T. Jeevaraaj</h1>
-      <nav>
-        <ul class="flex space-x-6 text-sm font-medium">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
-          <li><a href="#education" class="hover:text-blue-600">Education</a></li>
-          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
-    <section id="about">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">About</h2>
-      <p class="text-lg leading-relaxed">Medical Doctor and Biomedical Informatics Specialist passionate about digital transformation in public health. I build practical, open-source tools to help health institutions in low-resource settings improve data management, reporting, and service delivery.</p>
+<body>
+  <div class="container py-5">
+    <header class="mb-4 text-center">
+      <h1 class="fw-bold">Dr. Jeevaraaj</h1>
+      <p class="contact-info">
+        <i class="fas fa-map-marker-alt"></i> Cheyenne Wells, CO · 
+        <i class="fas fa-phone"></i> (317) 585-8468 · 
+        <i class="fas fa-envelope"></i> name@email.com · 
+        <i class="fab fa-github"></i> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a> · 
+        <i class="fab fa-upwork"></i> <a href="https://www.upwork.com/freelancers/~yourprofile" target="_blank">Upwork Profile</a>
+      </p>
+    </header>
+
+    <section>
+      <h2 class="section-title">About</h2>
+      <p>I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
     </section>
 
-    <section id="experience">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Experience</h2>
-      <div class="space-y-4">
-        <div>
-          <h3 class="text-xl font-bold">Digital Health Developer – RDHS Trincomalee</h3>
-          <p class="italic text-sm">2021 – Present</p>
-          <ul class="list-disc ml-6 mt-2 space-y-1">
-            <li>Built hospital dashboards using Google Apps Script and PWA technologies</li>
-            <li>Customized and deployed Snipe-IT for asset tracking of 6,500+ medical assets</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Medical Officer – Ministry of Health, Sri Lanka</h3>
-          <p class="italic text-sm">2015 – Present</p>
-          <ul class="list-disc ml-6 mt-2 space-y-1">
-            <li>Improved surveillance and inventory systems with custom-built tools</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Education</h2>
-      <ul class="list-disc ml-6 space-y-2">
-        <li><strong>MSc in Biomedical Informatics</strong> – PGIM, University of Colombo (2023)</li>
-        <li><strong>MBBS</strong> – [Medical Faculty Name], Sri Lanka</li>
-        <li><strong>MCGP</strong> – College of General Practitioners of Sri Lanka</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Projects</h2>
-      <ul class="list-disc ml-6 space-y-2">
-        <li><a href="https://github.com/jeevantjr/rdhs-stats-pwa" class="text-blue-600 hover:underline" target="_blank">RDHS Stats Viewer</a> – Health statistics dashboard PWA</li>
-        <li><a href="https://github.com/jeevantjr/OutbreakWatch" class="text-blue-600 hover:underline" target="_blank">Outbreak Watch</a> – Mobile-ready disease surveillance tool</li>
-        <li><a href="https://github.com/jeevantjr/FloodTrackerApp" class="text-blue-600 hover:underline" target="_blank">Flood Tracker App</a> – Infrastructure risk mapping tool</li>
-        <li><strong>Snipe-IT Custom Dashboard</strong> – Asset management enhancements</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Technical Skills</h2>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>JavaScript, HTML, CSS, Google Apps Script</li>
-        <li>React, Progressive Web Apps</li>
-        <li>DHIS2, OpenMRS, Mayan EDMS, Snipe-IT</li>
-        <li>MySQL, Google Sheets API, GitHub, Docker</li>
-        <li>Chart.js, Google Charts</li>
+    <section>
+      <h2 class="section-title">Experience</h2>
+      <ul>
+        <li><strong>Senior Web Developer - Intelitec Solutions</strong> (March 2013 - Present)</li>
+        <li><strong>Web Developer - Intelitec Solutions</strong> (Dec 2011 - March 2013)</li>
+        <li><strong>Junior Web Designer - Shout! Media Productions</strong> (July 2010 - Dec 2011)</li>
+        <li><strong>Web Design Intern - Shout! Media Productions</strong> (Sept 2008 - June 2010)</li>
       </ul>
     </section>
 
     <section>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Awards & Certifications</h2>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>1st Place – Digital Health Hackathon, PGIM (2024)</li>
-        <li>Google Mobile Web Specialist (2023)</li>
-        <li>Medical AI & Ethics – FutureLearn (2023)</li>
+      <h2 class="section-title">Education</h2>
+      <ul>
+        <li><strong>University of Colorado Boulder</strong> - BSc in Computer Science (GPA: 3.23)</li>
+        <li><strong>James Buchanan High School</strong> - Tech Magnet Program (GPA: 3.56)</li>
       </ul>
     </section>
 
     <section>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Interests</h2>
-      <p>Health storytelling, open-source tech for LMICs, nature walks, and experimental UI design in healthcare apps.</p>
+      <h2 class="section-title">Skills</h2>
+      <ul>
+        <li>Programming Languages & Tools: HTML, CSS, JS, Bootstrap, Git</li>
+        <li>Mobile-First Responsive Design</li>
+        <li>Cross Browser Testing & Debugging</li>
+        <li>Agile Development & Scrum</li>
+      </ul>
     </section>
 
-    <section id="contact">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/jeevantjr" class="text-blue-600" target="_blank">github.com/jeevantjr</a></p>
+    <section>
+      <h2 class="section-title">Interests</h2>
+      <p>Apart from being a web developer, I enjoy skiing, mountain biking, kayaking, and exploring tech. I'm also a sci-fi enthusiast and hobbyist chef.</p>
     </section>
-  </main>
 
-  <footer class="bg-white border-t mt-12 py-6 text-center text-sm text-gray-500">
-    &copy; 2025 Dr. T. Jeevaraaj · Built with Tailwind CSS · <a href="#top" class="text-blue-600 hover:underline">Back to top</a>
-  </footer>
+    <section>
+      <h2 class="section-title">Awards & Certifications</h2>
+      <ul>
+        <li>Google Analytics Certified Developer</li>
+        <li>Mobile Web Specialist - Google</li>
+        <li>1st Place - Emerging Tech Comp 2009 (CU Boulder)</li>
+        <li>1st Place - Adobe Creative Jam 2008 (UI Design)</li>
+        <li>2nd Place - Emerging Tech Comp 2008</li>
+        <li>1st Place - Hackathon 2006 (JBHS)</li>
+        <li>3rd Place - Hackathon 2005 (JBHS)</li>
+      </ul>
+    </section>
+  </div>
 </body>
+
 </html>
